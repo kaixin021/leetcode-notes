@@ -1,15 +1,18 @@
-class Solution {
+class Solution{
 public:
-    ListNode* reverseList(ListNode* head) {
-        ListNode* prev = nullptr;
+    ListNode* ReverseLinkedList( ListNode* head){
         ListNode* curr = head;
-        while (curr) {
-            ListNode* next = curr->next;
+        ListNode* prev = nullptr;
+        while (curr){
+            ListNode* next = curr -> next;
             curr->next = prev;
             prev = curr;
             curr = next;
         }
-        return prev;
     }
-};
+)
 
+
+#为什么参数没有引用符号
+#空格是不是无伤大雅
+#是否能对调位置
