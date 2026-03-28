@@ -30,4 +30,23 @@
   “需要一个在整个递归过程中共享且不断被修改的状态”，而引用参数是实现这一点的最佳方式。
   ```
 
+5.核心算法？
+  ```text
+  中序遍历 = 左子树 → 当前节点 → 右子树（递归实现）
+  时间复杂度:O(n)  每个节点访问一次
+  改一行，就变其他遍历：
+  前序遍历（中 → 左 → 右）:
+    res.push_back(root->val);
+    inorder(root->left, res);
+    inorder(root->right, res);
+  后序遍历（左 → 右 → 中）:
+    inorder(root->left, res);
+    inorder(root->right, res);
+    res.push_back(root->val);
+  总结：这段代码的核心算法就是：利用递归，让程序先完整处理左子树，再处理当前节点，最后处理右子树，从而自然得到中序遍历结果。
+  ```
+
+
+
+
 
