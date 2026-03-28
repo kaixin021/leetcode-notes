@@ -5,3 +5,17 @@
   2> 哈希集合 = 只存“key”的哈希表（没有 value）
   哈希集合就是“快速判断某个元素是否存在”
   ```
+
+2.哈希表的成员函数pairs.count(ch)进行什么操作？
+  ```text
+  unordered_map<char, char> pairs = {
+    {')', '('},
+    {']', '['},
+    {'}', '{'}
+  };
+  这里的结构是：
+  key   → value
+  ')'   → '('
+  ']'   → '['
+  '}'   → '{'
+  pairs.count(ch) 的含义是：判断 ch 是否是 map 里的 key
